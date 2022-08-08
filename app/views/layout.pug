@@ -1,0 +1,45 @@
+doctype html
+html.index
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Carpet & Mattress Junction | Flooring & beds in Southern Tasmania
+    meta(name='description' content='Carpet Junction sells high quality carpets, floating floor, vinyl, rugs and mattresses. Locally owned and operated. Your local Beds R Us store.')
+    meta(name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='stylesheets/compiledStyles.css')
+    script.
+  
+  body
+    include includes/header
+
+    block services-links
+      section.services-top-links
+        article
+          button
+            svg.services-top-links-icon
+              use(href='images/svg-sprites.svg#ruler-icon')
+            | Free on-site measure
+
+          dialog
+            i close icon
+            |  Book in for a measure up
+
+        article
+          button
+            svg.services-top-links-icon.pc-icon
+              use(href='images/svg-sprites.svg#pc-icon')
+            | Online quotes
+
+          dialog.
+
+        article
+          button
+            svg.services-top-links-icon
+              use(href='images/svg-sprites.svg#finger-snap-icon')
+            | Expert guidance & advice
+
+          dialog.
+
+    block body-content

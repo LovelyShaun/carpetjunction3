@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carpet Junction & Beds R Us Margate</title>
+    <link rel="stylesheet" href="./styles.min.css">
+  </head>
+  <body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation" style="position:sticky;top:0;">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://carpetjunction.com.au">
+        <img src="./path12.png" id="navbarLogo">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item">
+          Beds R Us Margate
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Flooring
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Carpet
+            </a>
+            <a class="navbar-item">
+              Laminate & Engineered Timbers
+            </a>
+            <a class="navbar-item">
+              Vinyl
+            </a>
+          </div>
+        </div>
+
+        <a class="navbar-item">
+          Rugs
+        </a>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="box" style="margin-bottom:0;">
+            I'm in a box.
+          </div>
+          <div class="buttons">
+            <a class="button is-primary" id='quote-request-btn'>
+              <strong>Request a Quote</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+    <div style="position:relative;">
+      <div style="position:absolute;padding:20px;left: 60%;top:0;height:100%;">
+        <img src="./candmlogo.png" alt="Carpet and Mattress Junction" style="margin:auto;">
+        <div style="max-width:600px;margin:auto;">
+          <div style="color:lightgrey;font-weight:bold;font-size: 2.5em;">your stop</div>
+          <div style="color:lightgrey;text-transform: uppercase;">For floor coverings in Tasmania</div>
+          <div style="color:lightgrey;">
+            We'll take you through the whole process of buying and installaing new floor coverings. Explore our large selection of carpets, vinyls, laminates and engineered-timber floating floors.
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;">
+        <div style="min-width:2%;background-color: black;"></div>
+        <img src="./P1560494222(thin).jpg" style='max-width:90%;max-height:600px;'alt="">
+        <div style="background-color:black;width:100%;"></div>
+      </div>
+    </div>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        CJ
+      </h1>
+      <p class="subtitle">
+        Welcome to <strong>Carpet Junction</strong>!
+      </p>
+    </div>
+  </section>
+
+  
+  
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Request a Quote</p>
+        <button class="delete close-modal-btn" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label is-small">First Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label is-small">Surname / Company</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="">
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="label is-small">Email</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label is-small">Phone Number</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label is-small">Street Address of Property</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label is-small">Product type</label>
+          <div class="select is-small">
+            <select name="product-type">
+              <option value="carpet-and-underlay">Carpet with Underlay</option>
+              <option value="carpet-no-underlay">Carpet on existing underlay</option>
+              <option value="floating-floor">Floating Floor</option>
+              <option value="vinyl">Vinyl</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label is-small">Product range/colour</label>
+          <div class="control">
+            <input class="input is-small" type="text" placeholder="">
+          </div>
+        </div>
+
+
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">Submit Request</button>
+        <button class="button close-modal-btn">Close</button>
+      </footer>
+    </div>
+    <button class="modal-close is-large close-modal-btn" aria-label="close"></button>
+  </div>
+
+
+  <footer class="footer" style="background-color:darkgrey">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
+
+
+  
+</body>
+
+  </html>
+  
+  <script>
+
+  document.getElementById('quote-request-btn').addEventListener('click', (e) => {
+    document.getElementsByClassName('modal')[0].classList.add('is-active');
+    e.stopImmediatePropagation();
+  })
+
+  document.addEventListener('click', (e) => {
+    if (document.getElementsByClassName('modal')[0].classList.contains('is-active') && (!e.target.closest('.modal-card') || e.target.classList.contains('close-modal-btn'))) {
+      document.getElementsByClassName('modal')[0].classList.toggle('is-active')
+    }
+  })
+
+  document.querySelector('.navbar-burger').addEventListener('click', () => {
+    document.querySelector('.navbar-menu').classList.toggle('is-active');
+  })
+
+</script>
