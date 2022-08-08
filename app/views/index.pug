@@ -1,128 +1,165 @@
-extends layout
+include includes/header.pug
 
-block services-links
+nav.navbar(role='navigation' aria-label='main navigation' style='position:sticky;top:0;')
+  .navbar-brand
+    a.navbar-item(href='https://carpetjunction.com.au')
+      img#navbarLogo(src='./path12.png')
+    a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+  #navbarBasicExample.navbar-menu
+    .navbar-start
+      a.navbar-item.
+        
+        Home
+        
+      a.navbar-item.
+        
+        Beds R Us Margate
+        
+      .navbar-item.has-dropdown.is-hoverable
+        a.navbar-link.
+          
+          Flooring
+          
+        .navbar-dropdown
+          a.navbar-item.
+            
+            Carpet
+            
+          a.navbar-item.
+            
+            Laminate & Engineered Timbers
+            
+          a.navbar-item.
+            
+            Vinyl
+            
+      a.navbar-item.
+        
+        Rugs
+        
+    .navbar-end
+      .navbar-item
+        .box(style='margin-bottom:0;').
+          
+          I'm in a box.
+          
+        .buttons
+          a.button.is-primary#quote-request-btn
+            strong Request a Quote
 
-block body-content
+div(style='position:relative;')
+  div(style='position:absolute;padding:20px;left: 60%;top:0;height:100%;')
+    img(src='./candmlogo.png' alt='Carpet and Mattress Junction' style='margin:auto;')
+    div(style='max-width:600px;margin:auto;')
+      div(style='color:lightgrey;font-weight:bold;font-size: 2.5em;') your stop
+      div(style='color:lightgrey;text-transform: uppercase;') For floor coverings in Tasmania
+      div(style='color:lightgrey;').
+        
+        We'll take you through the whole process of buying and installaing new floor coverings. Explore our large selection of carpets, vinyls, laminates and engineered-timber floating floors.
+        
+  div(style='display:flex;')
+    div(style='min-width:2%;background-color: black;')
+    img(src='./P1560494222(thin).jpg' style='max-width:90%;max-height:600px;' alt)
+    div(style='background-color:black;width:100%;')
+section.section
+  .container
+    h1.title.
+      
+      CJ
+      
+    p.subtitle Welcome to 
+      strong Carpet Junction!
 
-  main
-    section
-      header
-        .splash.
+.modal
+  .modal-background
+  .modal-card
+    header.modal-card-head
+      p.modal-card-title Request a Quote
+      button.delete.close-modal-btn(aria-label='close')
+    section.modal-card-body
+      .columns
+        .column
+          .field
+            label.label.is-small First Name
+            .control
+              input.input(type='text' placeholder)
+          .field
+            label.label.is-small Surname / Company
+            .control
+              input.input(type='text' placeholder)
+        .column
+          .field
+            label.label.is-small Email
+            .control
+              input.input(type='text' placeholder)
+          .field
+            label.label.is-small Phone Number
+            .control
+              input.input(type='text' placeholder required)
+      .field
+        label.label.is-small Street Address of Property
+        .control
+          input.input(type='text' placeholder)
+      .field
+        label.label.is-small Product type
+        .select.is-small
+          select(name='product-type')
+            option(value='carpet-and-underlay') Carpet with Underlay
+            option(value='carpet-no-underlay') Carpet on existing underlay
+            option(value='floating-floor') Floating Floor
+            option(value='vinyl') Vinyl
+      .field
+        label.label.is-small Product range/colour
+        .control
+          input.input.is-small(type='text' placeholder)
+        .file.has-name
+          label.file-label
+            input.file-input(type='file' name='resume')
+            span.file-cta
+              span.file-icon
+                i.fas.fa-upload
+              span.file-label.
+                
+                Choose a file…
+                
+            span.file-name.
+              
+              Screen Shot 2017-07-29 at 15.54.25.png
+              
+    footer.modal-card-foot
+      button.button.is-success Submit Request
+      button.button.close-modal-btn Close
+  button.modal-close.is-large.close-modal-btn(aria-label='close')
+footer.footer(style='background-color:darkgrey')
+  .content.has-text-centered
+    p
+      strong Bulma
+      |  by 
+      a(href='https://jgthms.com') Jeremy Thomas
+      | . The source code is licensed
 
+      a(href='http://opensource.org/licenses/mit-license.php') MIT
+      | . The website content is licensed 
+      a(href='http://creativecommons.org/licenses/by-nc-sa/4.0/') CC BY NC SA 4.0
+      | .
 
-        .intro-text
-          hgroup
-            h1 Your stop
-            h2 For flooring in Tasmania
-          p.main-body-copy-text We'll take you through the whole process of buying and installing new floor coverings. Explore our large selection of carpets, vinyls, laminates and engineered-timber floating floors.
-      article.flooring-page-links
-        a(href='/floating-floors')
-          div Floating floors
-        a(href='vinyl')
-          div Vinyl
-        a(href='carpets')
-          div Carpet
-    section
-      .rugs-text-content
-        h2.section-heading-light +Rugs, mats & carpet remnants
-        p.main-body-copy-text
-          | Come see our large display of natural and synthetic rugs in both traditional and modern styles, along with our many carpet remnants—
-          a.text-link(href='/contact') visit our showroom
-          |  to see the full range!
-      .rugs-images-wrapper
-        img(src='images/carpet-remnants-display.jpeg' alt='Carpet remnants in various colours standing up against a wall')
-        img(src='images/carpet-junction-rugs-display.jpg' alt='Carpet Junction\'s instore rug display, showing a variety of rugs in different styles and sizes')
-      svg(preserveAspectRatio='none' viewBox='0 0 1924 80' xmlns='http://www.w3.org/2000/svg')
-        g
-          path(d='M898.934 26.1722L2 76V0H1922V19.6291L898.934 26.1722Z')
-    article.coogans-promo
-      h2.section-heading-light Finance your flooring
-      a.coogans-svg-anchor.animated.animation-cue(rel='noopener' href='https://cgncredit.cooganstas.com.au/#/' target='_blank')
-        svg.coogans-logo
-          use(href='images/svg-sprites.svg#coogans-logo-text')
-          use(href='images/svg-sprites.svg#coogans-logo-border')
-      p
-        | We've partnered with Coogans to make it quicker and easier than ever to change your home's style. 
-        a.text-link(target='_blank' rel='noopener' href='https://cgncredit.cooganstas.com.au/#/') Apply now
-        |  to get approved in minutes and schedule your flooring installation today.
-      a.button-flat(rel='noopener' href='https://cgncredit.cooganstas.com.au/#/' target='_blank') Apply now
-    article.help-links-section
-      h2.section-heading-light Not sure where to start?
-      div
-        section
-          div
-            h3.body-heading Let us help
-            a(href='/product-wizard')
-              p
-                | Find the right flooring for your lifestyle, budget or purpose using our step-by-step 
-                em product finder
-              svg.arrow-icon
-                use(href='images/svg-sprites.svg#arrow-icon-circle')
-                use(href='images/svg-sprites.svg#arrow-icon-arrow')
-            p Or visit our info pages to learn the ins and outs of buying flooring:
-            ul
-              li
-                a(href='/guides/#carpet')
-                  i arrow icon
-                  | Carpet guide
-              li
-                a(href='/guides/#floating-floors')
-                  i arrow icon
-                  | Floating floor guide
-              li
-                a(href='/guides/#vinyl')
-                  i arrow icon
-                  | Vinyl guide
-        section
-          div
-            h3.body-heading Get in touch
-            a
-              p
-                em Visit our showroom
-                |  to see our range, get advice and take samples.
-              i arrow icon
-            a
-              p
-                | Or 
-                em contact us
-                |  via phone or email.
-              i arrow icon
-    article
-      img(src='mattress-junction-beds-r-us-margate-showroom.jpg' alt='Showroom with many mattresses and bed bases in front of Mattress Junction / Beds R Us Margate\'s banner, which shows a train against a starry night sky, the Tasmanian-made logo, along with Mattress Junction and Beds R Us logos.')
-      img(src='beds-r-us-margate-logo.png' alt='Beds R Us Margate logo')
-      h2 Your local Beds R Us store!
-      p Paragraph here
-      h2 Tasmanian-made
-      p paragraph here
-      img(src='tasmania-map.svg' alt='outline of Tasmanian coastline')
-      figure
-        img(src='sleepyhead-logo.png' alt='Sleepyhead logo')
-        img(src='sleepmaker-logo.png' alt='Sleepmaker logo')
-        img(src='bambi-logo.png' alt='My Bambi logo')
-      a(href='https://bedsrusmargate.carpetjunction.com.au') To mattress Junction
-      svg Train svg
-    article
-      section
-        h2 Our story
-        p Stephen and Jane Knibbs opened Carpet and Mattress Junction in 2006 with an aim to offer floor coverings and mattresses at affordable prices.
-        p Carpet Junction is an independent retailer and not part of a buying group. This allows Stephen and Jane greater flexibility in their product range and the ability to keep their prices extremely competetive.
-        p Between them Stephen and Jane have over 40 years of experience in the flooring and retail industries as both salespeople and buyers.
-      img(alt='Carpet Junction shopfront showing front door and logo above' src='carpet-junction-shopfront.jpg')
-    article
-      h2 Our suppliers
-      figure.
-
-        All the supplier logos go here
-
-    footer.
-
-      Footer goes here
-
-  script.
-
-    document.getElementById("mobile-menu-button").addEventListener("click", () => {
-      document.getElementsByTagName("nav")[0].classList.toggle("open")
-            })
-            document.getElementById("faqs-nav-slider-btn").addEventListener("click", () => {
-              document.getElementById("faqs-nav-li").classList.toggle("open")
-            })
+script.
+  
+  document.getElementById('quote-request-btn').addEventListener('click', (e) => {
+      document.getElementsByClassName('modal')[0].classList.add('is-active');
+      e.stopImmediatePropagation();
+    })
+  
+    document.addEventListener('click', (e) => {
+      if (document.getElementsByClassName('modal')[0].classList.contains('is-active') && (!e.target.closest('.modal-card') || e.target.classList.contains('close-modal-btn'))) {
+        document.getElementsByClassName('modal')[0].classList.toggle('is-active')
+      }
+    })
+  
+    document.querySelector('.navbar-burger').addEventListener('click', () => {
+      document.querySelector('.navbar-menu').classList.toggle('is-active');
+    })
+  
