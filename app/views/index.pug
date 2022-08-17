@@ -1,54 +1,8 @@
 include includes/header.pug
 
-nav.navbar(role='navigation' aria-label='main navigation' style='position:sticky;top:0;')
-  .navbar-brand
-    a.navbar-item(href='https://carpetjunction.com.au')
-      img#navbarLogo(src='./path12.png')
-    a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample')
-      span(aria-hidden='true')
-      span(aria-hidden='true')
-      span(aria-hidden='true')
-  #navbarBasicExample.navbar-menu
-    .navbar-start
-      a.navbar-item.
-        
-        Home
-        
-      a.navbar-item.
-        
-        Beds R Us Margate
-        
-      .navbar-item.has-dropdown.is-hoverable
-        a.navbar-link.
-          
-          Flooring
-          
-        .navbar-dropdown
-          a.navbar-item.
-            
-            Carpet
-            
-          a.navbar-item.
-            
-            Laminate & Engineered Timbers
-            
-          a.navbar-item.
-            
-            Vinyl
-            
-      a.navbar-item.
-        
-        Rugs
-        
-    .navbar-end
-      .navbar-item
-        .box(style='margin-bottom:0;').
-          
-          I'm in a box.
-          
-        .buttons
-          a.button.is-primary#quote-request-btn
-            strong Request a Quote
+include includes/navbar.pug
+
+include includes/quoteModal.pug
 
 div(style='position:relative;')
   div(style='position:absolute;padding:20px;left: 60%;top:0;height:100%;')
@@ -74,69 +28,12 @@ section.section
       strong Carpet Junction!
 
   section
-    div
-      img(src='./images/desktop/magnolia_home-banner_01-desktop-1x.jpg' alt)
+    div#flooring-page-link-box-container
+      a.flooring-page-link-box
+      a.flooring-page-link-box
+      a.flooring-page-link-box
 
-.modal
-  .modal-background
-  .modal-card
-    header.modal-card-head
-      p.modal-card-title Request a Quote
-      button.delete.close-modal-btn(aria-label='close')
-    section.modal-card-body
-      .columns
-        .column
-          .field
-            label.label.is-small First Name
-            .control
-              input.input(type='text' placeholder)
-          .field
-            label.label.is-small Surname / Company
-            .control
-              input.input(type='text' placeholder)
-        .column
-          .field
-            label.label.is-small Email
-            .control
-              input.input(type='text' placeholder)
-          .field
-            label.label.is-small Phone Number
-            .control
-              input.input(type='text' placeholder required)
-      .field
-        label.label.is-small Street Address of Property
-        .control
-          input.input(type='text' placeholder)
-      .field
-        label.label.is-small Product type
-        .select.is-small
-          select(name='product-type')
-            option(value='carpet-and-underlay') Carpet with Underlay
-            option(value='carpet-no-underlay') Carpet on existing underlay
-            option(value='floating-floor') Floating Floor
-            option(value='vinyl') Vinyl
-      .field
-        label.label.is-small Product range/colour
-        .control
-          input.input.is-small(type='text' placeholder)
-        .file.has-name
-          label.file-label
-            input.file-input(type='file' name='resume')
-            span.file-cta
-              span.file-icon
-                i.fas.fa-upload
-              span.file-label.
-                
-                Choose a file…
-                
-            span.file-name.
-              
-              Screen Shot 2017-07-29 at 15.54.25.png
-              
-    footer.modal-card-foot
-      button.button.is-success Submit Request
-      button.button.close-modal-btn Close
-  button.modal-close.is-large.close-modal-btn(aria-label='close')
+
 footer.footer(style='background-color:darkgrey')
   .content.has-text-centered
     p

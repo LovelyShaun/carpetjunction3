@@ -1,0 +1,49 @@
+nav.navbar(role='navigation' aria-label='main navigation' style='position:sticky;top:0;')
+  .navbar-brand
+    a.navbar-item(href='https://carpetjunction.com.au')
+      img#navbarLogo(src='./path12.png')
+    a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+  #navbarBasicExample.navbar-menu
+    .navbar-start
+      a.navbar-item.
+        
+        Home
+        
+      a.navbar-item.
+        
+        Beds R Us Margate
+        
+      .navbar-item.has-dropdown.is-hoverable
+        a.navbar-link.
+          
+          Flooring
+          
+        .navbar-dropdown
+          a.navbar-item.
+            
+            Carpet
+            
+          a.navbar-item.
+            
+            Laminate & Engineered Timbers
+            
+          a.navbar-item.
+            
+            Vinyl
+            
+      a.navbar-item.
+        
+        Rugs
+        
+    .navbar-end
+      .navbar-item
+        .box(style='margin-bottom:0;').
+          
+          I'm in a box.
+          
+        .buttons
+          a.button.is-primary#quote-request-btn
+            strong Request a Quote

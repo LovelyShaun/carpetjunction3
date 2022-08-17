@@ -1,0 +1,60 @@
+.modal
+  .modal-background
+  .modal-card
+    header.modal-card-head
+      p.modal-card-title Request a Quote
+      button.delete.close-modal-btn(aria-label='close')
+    section.modal-card-body
+      .columns
+        .column
+          .field
+            label.label.is-small First Name
+            .control
+              input.input(type='text' placeholder)
+          .field
+            label.label.is-small Surname / Company
+            .control
+              input.input(type='text' placeholder)
+        .column
+          .field
+            label.label.is-small Email
+            .control
+              input.input(type='text' placeholder)
+          .field
+            label.label.is-small Phone Number
+            .control
+              input.input(type='text' placeholder required)
+      .field
+        label.label.is-small Street Address of Property
+        .control
+          input.input(type='text' placeholder)
+      .field
+        label.label.is-small Product type
+        .select.is-small
+          select(name='product-type')
+            option(value='carpet-and-underlay') Carpet with Underlay
+            option(value='carpet-no-underlay') Carpet on existing underlay
+            option(value='floating-floor') Floating Floor
+            option(value='vinyl') Vinyl
+      .field
+        label.label.is-small Product range/colour
+        .control
+          input.input.is-small(type='text' placeholder)
+        .file.has-name
+          label.file-label
+            input.file-input(type='file' name='resume')
+            span.file-cta
+              span.file-icon
+                i.fas.fa-upload
+              span.file-label.
+                
+                Choose a file…
+                
+            span.file-name.
+              
+              Screen Shot 2017-07-29 at 15.54.25.png
+              
+    footer.modal-card-foot
+      button.button.is-success Submit Request
+      button.button.close-modal-btn Close
+  button.modal-close.is-large.close-modal-btn(aria-label='close')
