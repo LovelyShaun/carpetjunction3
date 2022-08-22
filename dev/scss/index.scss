@@ -5,6 +5,7 @@
     border: 4px solid white; 
     box-shadow: 1px 2px 6px 3px lightgrey;
     position:relative;
+    margin:20px;
 
     &:nth-child(1) {
         background-image: url('./images/desktop/balinese_home-banner_01-desktop-1x.jpg');
@@ -18,25 +19,24 @@
 
     &:hover {
         position: relative;
-        top: -10px;
+        top: -3px;
+        box-shadow: 5px 4px 15px 3px rgba(250, 161, 161, 0.719);
     }
 }
 
 .flooring-page-link-text-container {
     color:white;
     font-size: 24px;
-    font-weight:bold;
     position: absolute;
     right: -20px;
     top: 11px;
-    z-index: 500; 
-    background-color: rgba(231, 102, 102, 0.89);
+    z-index: 1; 
+    background-color: rgb(229 34 34 / 89%);
     border-radius: 0 20px 0 20px;
     padding: 5px 15px;
 }
 
 #flooring-page-link-box-container {
     display: flex;
-
 }
 
